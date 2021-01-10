@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="quw-9N-dzz">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--MainVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="MainVC" id="BYZ-38-t0r" customClass="MainVC" customModule="MyBooks" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yLm-KW-7eD" userLabel="Loading View">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D8o-Ai-AY7" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="8" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8X6-gv-dcX" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="iCj-9m-cG5"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Circle" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="8X6-gv-dcX" secondAttribute="trailing" constant="15" id="a52-7t-k5d"/>
+                                            <constraint firstAttribute="bottom" secondItem="8X6-gv-dcX" secondAttribute="bottom" constant="13" id="c3E-fg-b0M"/>
+                                            <constraint firstItem="8X6-gv-dcX" firstAttribute="leading" secondItem="D8o-Ai-AY7" secondAttribute="leading" constant="15" id="iAi-ri-jc3"/>
+                                            <constraint firstItem="8X6-gv-dcX" firstAttribute="top" secondItem="D8o-Ai-AY7" secondAttribute="top" constant="13" id="ofE-o7-HjT"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3t1-kZ-vjK" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="73" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="G8I-nD-NXC" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="fkO-QI-xNN"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="G8I-nD-NXC" firstAttribute="top" secondItem="3t1-kZ-vjK" secondAttribute="top" constant="13" id="4r7-LI-Aih"/>
+                                            <constraint firstItem="G8I-nD-NXC" firstAttribute="leading" secondItem="3t1-kZ-vjK" secondAttribute="leading" constant="15" id="ILN-RX-fQ0"/>
+                                            <constraint firstAttribute="bottom" secondItem="G8I-nD-NXC" secondAttribute="bottom" constant="13" id="S8i-sR-0QB"/>
+                                            <constraint firstAttribute="trailing" secondItem="G8I-nD-NXC" secondAttribute="trailing" constant="15" id="hBH-fu-c6W"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TsP-QI-gPX" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="138" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xgD-QZ-SZ1" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="Twd-wf-Y7U"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="xgD-QZ-SZ1" firstAttribute="top" secondItem="TsP-QI-gPX" secondAttribute="top" constant="13" id="0f1-Fq-bp2"/>
+                                            <constraint firstAttribute="bottom" secondItem="xgD-QZ-SZ1" secondAttribute="bottom" constant="13" id="1Rm-Jh-O4S"/>
+                                            <constraint firstAttribute="trailing" secondItem="xgD-QZ-SZ1" secondAttribute="trailing" constant="15" id="Ty4-Mt-3AV"/>
+                                            <constraint firstItem="xgD-QZ-SZ1" firstAttribute="leading" secondItem="TsP-QI-gPX" secondAttribute="leading" constant="15" id="jo8-dq-6Cq"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V5F-12-wfV" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="203" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pED-qR-CUv" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="vgR-1l-Ex6"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="pED-qR-CUv" firstAttribute="top" secondItem="V5F-12-wfV" secondAttribute="top" constant="13" id="R9n-le-Ne1"/>
+                                            <constraint firstAttribute="bottom" secondItem="pED-qR-CUv" secondAttribute="bottom" constant="13" id="nm1-rS-J3D"/>
+                                            <constraint firstItem="pED-qR-CUv" firstAttribute="leading" secondItem="V5F-12-wfV" secondAttribute="leading" constant="15" id="pju-5d-y28"/>
+                                            <constraint firstAttribute="trailing" secondItem="pED-qR-CUv" secondAttribute="trailing" constant="15" id="qmE-EG-EEL"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JfK-Sa-EsI" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="268" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3k3-Fw-JHO" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="eA9-nJ-kfB"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3k3-Fw-JHO" firstAttribute="top" secondItem="JfK-Sa-EsI" secondAttribute="top" constant="13" id="auJ-8Q-RjW"/>
+                                            <constraint firstAttribute="trailing" secondItem="3k3-Fw-JHO" secondAttribute="trailing" constant="15" id="dve-IH-L8N"/>
+                                            <constraint firstItem="3k3-Fw-JHO" firstAttribute="leading" secondItem="JfK-Sa-EsI" secondAttribute="leading" constant="15" id="iTc-ve-ss7"/>
+                                            <constraint firstAttribute="bottom" secondItem="3k3-Fw-JHO" secondAttribute="bottom" constant="13" id="wW2-TY-UDy"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ALZ-qy-YJY" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="333" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bi5-ip-Cru" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="QOZ-Km-uAv"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="Bi5-ip-Cru" firstAttribute="leading" secondItem="ALZ-qy-YJY" secondAttribute="leading" constant="15" id="6LV-oi-PVP"/>
+                                            <constraint firstAttribute="trailing" secondItem="Bi5-ip-Cru" secondAttribute="trailing" constant="15" id="7JZ-rm-5xn"/>
+                                            <constraint firstItem="Bi5-ip-Cru" firstAttribute="top" secondItem="ALZ-qy-YJY" secondAttribute="top" constant="13" id="js3-Q5-b9m"/>
+                                            <constraint firstAttribute="bottom" secondItem="Bi5-ip-Cru" secondAttribute="bottom" constant="13" id="xiT-3y-SD5"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rbn-Q5-1x1" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="397" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PLO-G2-lIL" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="NTw-SB-22i"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="PLO-G2-lIL" secondAttribute="trailing" constant="15" id="2dK-zc-PQP"/>
+                                            <constraint firstAttribute="bottom" secondItem="PLO-G2-lIL" secondAttribute="bottom" constant="13" id="Es0-LO-rfa"/>
+                                            <constraint firstItem="PLO-G2-lIL" firstAttribute="top" secondItem="Rbn-Q5-1x1" secondAttribute="top" constant="13" id="Nm1-fb-0f4"/>
+                                            <constraint firstItem="PLO-G2-lIL" firstAttribute="leading" secondItem="Rbn-Q5-1x1" secondAttribute="leading" constant="15" id="TCx-bf-aBx"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E3C-ck-5hR" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="462" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RD7-1B-UGh" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="x9K-GL-OLP"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="RD7-1B-UGh" secondAttribute="trailing" constant="15" id="Kpy-JZ-EbA"/>
+                                            <constraint firstItem="RD7-1B-UGh" firstAttribute="leading" secondItem="E3C-ck-5hR" secondAttribute="leading" constant="15" id="Xj6-Y1-aK4"/>
+                                            <constraint firstAttribute="bottom" secondItem="RD7-1B-UGh" secondAttribute="bottom" constant="13" id="c5x-lP-Ann"/>
+                                            <constraint firstItem="RD7-1B-UGh" firstAttribute="top" secondItem="E3C-ck-5hR" secondAttribute="top" constant="13" id="kHf-E6-NmF"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ke0-hb-PZp" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="527" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6dF-NK-AII" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="hOc-BD-X0R"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="6dF-NK-AII" firstAttribute="top" secondItem="Ke0-hb-PZp" secondAttribute="top" constant="13" id="4Dh-Fv-DDX"/>
+                                            <constraint firstAttribute="bottom" secondItem="6dF-NK-AII" secondAttribute="bottom" constant="13" id="9WO-6c-XPR"/>
+                                            <constraint firstAttribute="trailing" secondItem="6dF-NK-AII" secondAttribute="trailing" constant="15" id="AEY-T7-K7h"/>
+                                            <constraint firstItem="6dF-NK-AII" firstAttribute="leading" secondItem="Ke0-hb-PZp" secondAttribute="leading" constant="15" id="pus-m1-1uC"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tj9-eW-F2H" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="592" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ckb-FS-hx0" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="Vlv-bh-vE0"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="Ckb-FS-hx0" secondAttribute="trailing" constant="15" id="HSF-Rl-H1m"/>
+                                            <constraint firstItem="Ckb-FS-hx0" firstAttribute="top" secondItem="Tj9-eW-F2H" secondAttribute="top" constant="13" id="L8W-mU-dJh"/>
+                                            <constraint firstItem="Ckb-FS-hx0" firstAttribute="leading" secondItem="Tj9-eW-F2H" secondAttribute="leading" constant="15" id="dRp-Am-mFP"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ckb-FS-hx0" secondAttribute="bottom" constant="13" id="xg0-SF-V6K"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XmV-hP-2Kx" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="657" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B3s-id-jpn" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="bnx-f6-ciz"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="B3s-id-jpn" secondAttribute="trailing" constant="15" id="71k-fo-xl6"/>
+                                            <constraint firstItem="B3s-id-jpn" firstAttribute="top" secondItem="XmV-hP-2Kx" secondAttribute="top" constant="13" id="Bvi-do-oOx"/>
+                                            <constraint firstItem="B3s-id-jpn" firstAttribute="leading" secondItem="XmV-hP-2Kx" secondAttribute="leading" constant="15" id="T1W-u4-ZiU"/>
+                                            <constraint firstAttribute="bottom" secondItem="B3s-id-jpn" secondAttribute="bottom" constant="13" id="l7w-nW-lut"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QOS-cJ-ThJ" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="722" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rfj-uv-djw" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="SYR-0s-ilN"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="rfj-uv-djw" firstAttribute="leading" secondItem="QOS-cJ-ThJ" secondAttribute="leading" constant="15" id="5sS-yi-ukh"/>
+                                            <constraint firstItem="rfj-uv-djw" firstAttribute="top" secondItem="QOS-cJ-ThJ" secondAttribute="top" constant="13" id="m8P-Bu-MP6"/>
+                                            <constraint firstAttribute="trailing" secondItem="rfj-uv-djw" secondAttribute="trailing" constant="15" id="wOs-3a-yeT"/>
+                                            <constraint firstAttribute="bottom" secondItem="rfj-uv-djw" secondAttribute="bottom" constant="13" id="y7e-Ks-Ev1"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Im-BJ-CSk" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                        <rect key="frame" x="12" y="787" width="390" height="52"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JZ7-fg-Ser" customClass="ShimmerView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="360" height="26"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="1gT-0C-mhM"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Animate" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="JZ7-fg-Ser" secondAttribute="bottom" constant="13" id="F3g-Bt-Mu8"/>
+                                            <constraint firstItem="JZ7-fg-Ser" firstAttribute="top" secondItem="4Im-BJ-CSk" secondAttribute="top" constant="13" id="idM-Zp-Fw1"/>
+                                            <constraint firstAttribute="trailing" secondItem="JZ7-fg-Ser" secondAttribute="trailing" constant="15" id="lhY-ne-MHa"/>
+                                            <constraint firstItem="JZ7-fg-Ser" firstAttribute="leading" secondItem="4Im-BJ-CSk" secondAttribute="leading" constant="15" id="xe3-ae-uyQ"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.96475964780000001" green="0.96845394370000004" blue="0.97648078199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstItem="4Im-BJ-CSk" firstAttribute="top" secondItem="QOS-cJ-ThJ" secondAttribute="bottom" constant="13" id="14s-Ma-hKs"/>
+                                    <constraint firstItem="ALZ-qy-YJY" firstAttribute="top" secondItem="JfK-Sa-EsI" secondAttribute="bottom" constant="13" id="16L-9N-dU5"/>
+                                    <constraint firstItem="V5F-12-wfV" firstAttribute="top" secondItem="TsP-QI-gPX" secondAttribute="bottom" constant="13" id="3AN-9y-Snc"/>
+                                    <constraint firstAttribute="trailing" secondItem="D8o-Ai-AY7" secondAttribute="trailing" constant="12" id="3Xz-eW-fWA"/>
+                                    <constraint firstItem="D8o-Ai-AY7" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="6oX-rf-Apg"/>
+                                    <constraint firstItem="Ke0-hb-PZp" firstAttribute="top" secondItem="E3C-ck-5hR" secondAttribute="bottom" constant="13" id="9mV-41-eZ0"/>
+                                    <constraint firstItem="Rbn-Q5-1x1" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="En4-9m-mc0"/>
+                                    <constraint firstItem="Rbn-Q5-1x1" firstAttribute="top" secondItem="ALZ-qy-YJY" secondAttribute="bottom" constant="12" id="FhL-K9-QAF"/>
+                                    <constraint firstAttribute="trailing" secondItem="Rbn-Q5-1x1" secondAttribute="trailing" constant="12" id="GIe-Ea-RB7"/>
+                                    <constraint firstAttribute="trailing" secondItem="TsP-QI-gPX" secondAttribute="trailing" constant="12" id="I1m-vw-zHW"/>
+                                    <constraint firstItem="Tj9-eW-F2H" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="Iie-iJ-jKb"/>
+                                    <constraint firstItem="E3C-ck-5hR" firstAttribute="top" secondItem="Rbn-Q5-1x1" secondAttribute="bottom" constant="13" id="J0c-yj-RqB"/>
+                                    <constraint firstItem="TsP-QI-gPX" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="Jgq-En-gTF"/>
+                                    <constraint firstAttribute="trailing" secondItem="3t1-kZ-vjK" secondAttribute="trailing" constant="12" id="JtP-go-JcN"/>
+                                    <constraint firstAttribute="trailing" secondItem="QOS-cJ-ThJ" secondAttribute="trailing" constant="12" id="Jv3-lm-PMH"/>
+                                    <constraint firstItem="QOS-cJ-ThJ" firstAttribute="top" secondItem="XmV-hP-2Kx" secondAttribute="bottom" constant="13" id="POW-52-nmV"/>
+                                    <constraint firstAttribute="trailing" secondItem="Ke0-hb-PZp" secondAttribute="trailing" constant="12" id="Qmc-eR-YDu"/>
+                                    <constraint firstItem="D8o-Ai-AY7" firstAttribute="top" secondItem="yLm-KW-7eD" secondAttribute="top" constant="8" id="WWJ-BU-6fN"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tj9-eW-F2H" secondAttribute="trailing" constant="12" id="X3D-ZQ-lHn"/>
+                                    <constraint firstItem="3t1-kZ-vjK" firstAttribute="top" secondItem="D8o-Ai-AY7" secondAttribute="bottom" constant="13" id="XAu-m9-wrd"/>
+                                    <constraint firstItem="V5F-12-wfV" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="YBK-P1-zXN"/>
+                                    <constraint firstItem="E3C-ck-5hR" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="Ziw-ex-Y3f"/>
+                                    <constraint firstItem="TsP-QI-gPX" firstAttribute="top" secondItem="3t1-kZ-vjK" secondAttribute="bottom" constant="13" id="ahH-Yo-lXd"/>
+                                    <constraint firstItem="JfK-Sa-EsI" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="cRI-o6-ytu"/>
+                                    <constraint firstItem="4Im-BJ-CSk" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="cYL-5L-OLp"/>
+                                    <constraint firstAttribute="trailing" secondItem="XmV-hP-2Kx" secondAttribute="trailing" constant="12" id="d81-Yq-IqY"/>
+                                    <constraint firstItem="XmV-hP-2Kx" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="hMr-eL-EAA"/>
+                                    <constraint firstItem="XmV-hP-2Kx" firstAttribute="top" secondItem="Tj9-eW-F2H" secondAttribute="bottom" constant="13" id="iTI-Zg-PfP"/>
+                                    <constraint firstAttribute="trailing" secondItem="4Im-BJ-CSk" secondAttribute="trailing" constant="12" id="iwp-BK-kqI"/>
+                                    <constraint firstItem="Tj9-eW-F2H" firstAttribute="top" secondItem="Ke0-hb-PZp" secondAttribute="bottom" constant="13" id="lPD-Ie-quc"/>
+                                    <constraint firstAttribute="trailing" secondItem="ALZ-qy-YJY" secondAttribute="trailing" constant="12" id="lfN-me-4Bf"/>
+                                    <constraint firstAttribute="trailing" secondItem="JfK-Sa-EsI" secondAttribute="trailing" constant="12" id="mcF-Ur-Q9q"/>
+                                    <constraint firstItem="JfK-Sa-EsI" firstAttribute="top" secondItem="V5F-12-wfV" secondAttribute="bottom" constant="13" id="r0B-Rr-xJD"/>
+                                    <constraint firstItem="ALZ-qy-YJY" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="rI0-UN-QPj"/>
+                                    <constraint firstAttribute="trailing" secondItem="V5F-12-wfV" secondAttribute="trailing" constant="12" id="tzT-9Q-iOq"/>
+                                    <constraint firstAttribute="trailing" secondItem="E3C-ck-5hR" secondAttribute="trailing" constant="12" id="tzh-gn-eE1"/>
+                                    <constraint firstItem="3t1-kZ-vjK" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="uuV-Dk-sTs"/>
+                                    <constraint firstItem="QOS-cJ-ThJ" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="vZ1-cC-GR2"/>
+                                    <constraint firstItem="Ke0-hb-PZp" firstAttribute="leading" secondItem="yLm-KW-7eD" secondAttribute="leading" constant="12" id="wh6-4g-vuY"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tiy-Fw-UDl">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ei0-g8-DJl" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="484.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hai Michael," lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rfi-H9-uK9">
+                                                <rect key="frame" x="16" y="14" width="304" height="37"/>
+                                                <fontDescription key="fontDescription" name="AvenirNextCondensed-Bold" family="Avenir Next Condensed" pointSize="27"/>
+                                                <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5il-BB-92T">
+                                                <rect key="frame" x="16" y="51" width="386" height="46.5"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment content="Buku apa yang kamu miliki hari ini ?. Tambahkan buku yang kamu punya disini. ">
+                                                        <attributes>
+                                                            <color key="NSColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <font key="NSFont" size="17" name="AvenirNext-Medium"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="LanguageStringKey" value="greetingMainScreen"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BXU-ML-Zim" userLabel="Search Box" customClass="SearchCardView" customModule="MyBooks" customModuleProvider="target">
+                                                <rect key="frame" x="12" y="113.5" width="390" height="50"/>
+                                                <subviews>
+                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search Book" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cb0-9d-sdV">
+                                                        <rect key="frame" x="16" y="7" width="358" height="36"/>
+                                                        <color key="textColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="18"/>
+                                                        <textInputTraits key="textInputTraits"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="LanguageStringKey" value="searchBook"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </textField>
+                                                </subviews>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="Cb0-9d-sdV" secondAttribute="trailing" constant="16" id="E48-hb-H36"/>
+                                                    <constraint firstAttribute="height" constant="50" id="QZL-xP-zZY"/>
+                                                    <constraint firstItem="Cb0-9d-sdV" firstAttribute="leading" secondItem="BXU-ML-Zim" secondAttribute="leading" constant="16" id="a4n-zB-3Ie"/>
+                                                    <constraint firstAttribute="bottom" secondItem="Cb0-9d-sdV" secondAttribute="bottom" constant="7" id="nEb-W4-xY3"/>
+                                                    <constraint firstItem="Cb0-9d-sdV" firstAttribute="top" secondItem="BXU-ML-Zim" secondAttribute="top" constant="7" id="oVA-IS-rgO"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ev7-JA-Fqg" userLabel="Seperator">
+                                                <rect key="frame" x="0.0" y="175.5" width="414" height="1"/>
+                                                <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="1" id="8pd-KV-4aG"/>
+                                                </constraints>
+                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="LlF-ia-x2o">
+                                                <rect key="frame" x="0.0" y="184.5" width="414" height="300"/>
+                                                <color key="backgroundColor" red="0.96475964780000001" green="0.96845394370000004" blue="0.97648078199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="300" id="n4D-s7-qkB"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="Zav-iE-QV8">
+                                                    <size key="itemSize" width="414" height="127"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="BooksCell" id="VfL-E4-X9X" customClass="BooksCell" customModule="MyBooks" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="PUZ-2Y-Sm4">
+                                                            <rect key="frame" x="0.0" y="0.0" width="414" height="127"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5mM-f5-naS" customClass="BookCardView" customModule="MyBooks" customModuleProvider="target">
+                                                                    <rect key="frame" x="12" y="6" width="390" height="52"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vLH-Cu-j6G">
+                                                                            <rect key="frame" x="15" y="13" width="317" height="26"/>
+                                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="19"/>
+                                                                            <color key="textColor" red="0.12984204290000001" green="0.12984612579999999" blue="0.12984395030000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s5A-Pl-4E3" customClass="CircleCardView" customModule="MyBooks" customModuleProvider="target">
+                                                                            <rect key="frame" x="344" y="9" width="34" height="34"/>
+                                                                            <subviews>
+                                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="circle-book" translatesAutoresizingMaskIntoConstraints="NO" id="I7h-1U-YKn">
+                                                                                    <rect key="frame" x="2" y="2" width="30" height="30"/>
+                                                                                </imageView>
+                                                                            </subviews>
+                                                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="34" id="GLb-bW-2UC"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="I7h-1U-YKn" secondAttribute="trailing" constant="2" id="NT7-7O-17Q"/>
+                                                                                <constraint firstItem="I7h-1U-YKn" firstAttribute="top" secondItem="s5A-Pl-4E3" secondAttribute="top" constant="2" id="RXn-9K-qyH"/>
+                                                                                <constraint firstAttribute="width" constant="34" id="aeo-9o-eFl"/>
+                                                                                <constraint firstItem="I7h-1U-YKn" firstAttribute="leading" secondItem="s5A-Pl-4E3" secondAttribute="leading" constant="2" id="c9v-Oi-lAN"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="I7h-1U-YKn" secondAttribute="bottom" constant="2" id="fgw-WG-47Y"/>
+                                                                            </constraints>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="Circle" value="YES"/>
+                                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="Show" value="YES"/>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </view>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NVb-1W-2XJ">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="390" height="52"/>
+                                                                        </button>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstItem="vLH-Cu-j6G" firstAttribute="leading" secondItem="5mM-f5-naS" secondAttribute="leading" constant="15" id="368-YT-Wd2"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="s5A-Pl-4E3" secondAttribute="trailing" constant="12" id="ELs-7j-Zxy"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="vLH-Cu-j6G" secondAttribute="bottom" constant="13" id="En6-O3-RTy"/>
+                                                                        <constraint firstItem="s5A-Pl-4E3" firstAttribute="leading" secondItem="vLH-Cu-j6G" secondAttribute="trailing" constant="12" id="Rzr-iw-bB9"/>
+                                                                        <constraint firstItem="NVb-1W-2XJ" firstAttribute="top" secondItem="5mM-f5-naS" secondAttribute="top" id="UxW-uD-zCa"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="NVb-1W-2XJ" secondAttribute="bottom" id="VCu-vZ-F9e"/>
+                                                                        <constraint firstItem="s5A-Pl-4E3" firstAttribute="centerY" secondItem="5mM-f5-naS" secondAttribute="centerY" id="a09-U5-a6f"/>
+                                                                        <constraint firstItem="NVb-1W-2XJ" firstAttribute="leading" secondItem="5mM-f5-naS" secondAttribute="leading" id="fLG-gE-DJz"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="NVb-1W-2XJ" secondAttribute="trailing" id="kuO-LH-CgY"/>
+                                                                        <constraint firstItem="vLH-Cu-j6G" firstAttribute="top" secondItem="5mM-f5-naS" secondAttribute="top" constant="13" id="nnW-LO-o6R"/>
+                                                                    </constraints>
+                                                                    <userDefinedRuntimeAttributes>
+                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="Shadow" value="YES"/>
+                                                                    </userDefinedRuntimeAttributes>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="5mM-f5-naS" firstAttribute="top" secondItem="PUZ-2Y-Sm4" secondAttribute="top" constant="6" id="0sh-9c-Wx1"/>
+                                                                <constraint firstItem="5mM-f5-naS" firstAttribute="leading" secondItem="PUZ-2Y-Sm4" secondAttribute="leading" constant="12" id="a9z-e6-r8c"/>
+                                                                <constraint firstAttribute="trailing" secondItem="5mM-f5-naS" secondAttribute="trailing" constant="12" id="liv-50-pcS"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <size key="customSize" width="414" height="127"/>
+                                                        <connections>
+                                                            <outlet property="btnDetail" destination="NVb-1W-2XJ" id="hQ7-oL-tgT"/>
+                                                            <outlet property="name" destination="vLH-Cu-j6G" id="o7N-uo-zW3"/>
+                                                            <outlet property="parentView" destination="5mM-f5-naS" id="SKD-yp-wox"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="jzB-2A-ER3"/>
+                                                    <outlet property="delegate" destination="BYZ-38-t0r" id="4Fu-3h-vii"/>
+                                                </connections>
+                                            </collectionView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UwP-tW-a04">
+                                                <rect key="frame" x="372" y="12" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="NLN-FQ-88M"/>
+                                                    <constraint firstAttribute="height" constant="30" id="bav-Pz-h3Y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                                <color key="tintColor" systemColor="systemRedColor"/>
+                                                <state key="normal" title="Button">
+                                                    <imageReference key="image" image="power" catalog="system" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="OnLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FEU-JV-uRy"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b8u-zZ-g9b">
+                                                <rect key="frame" x="332" y="12" width="30" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="VQ9-K5-fM7"/>
+                                                    <constraint firstAttribute="height" constant="30" id="mpw-DA-mPY"/>
+                                                </constraints>
+                                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                                <state key="normal">
+                                                    <imageReference key="image" image="person.fill" catalog="system" symbolScale="large"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="OnNavigateProfile:" destination="BYZ-38-t0r" eventType="touchUpInside" id="omb-Ou-q0f"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96475964780000001" green="0.96845394370000004" blue="0.97648078199999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <constraints>
+                                            <constraint firstItem="LlF-ia-x2o" firstAttribute="leading" secondItem="ei0-g8-DJl" secondAttribute="leading" id="2Gg-ms-qs0"/>
+                                            <constraint firstItem="b8u-zZ-g9b" firstAttribute="leading" secondItem="Rfi-H9-uK9" secondAttribute="trailing" constant="12" id="6RX-NN-m0k"/>
+                                            <constraint firstItem="BXU-ML-Zim" firstAttribute="top" secondItem="5il-BB-92T" secondAttribute="bottom" constant="16" id="7pU-Ab-Xgj"/>
+                                            <constraint firstItem="b8u-zZ-g9b" firstAttribute="top" secondItem="UwP-tW-a04" secondAttribute="top" id="CHS-wg-ZqY"/>
+                                            <constraint firstItem="ev7-JA-Fqg" firstAttribute="leading" secondItem="ei0-g8-DJl" secondAttribute="leading" id="COh-Hr-5QT"/>
+                                            <constraint firstItem="Rfi-H9-uK9" firstAttribute="top" secondItem="ei0-g8-DJl" secondAttribute="top" constant="14" id="DdU-Fl-XIv"/>
+                                            <constraint firstItem="5il-BB-92T" firstAttribute="top" secondItem="Rfi-H9-uK9" secondAttribute="bottom" id="HHh-ar-0dz"/>
+                                            <constraint firstItem="ev7-JA-Fqg" firstAttribute="top" secondItem="BXU-ML-Zim" secondAttribute="bottom" constant="12" id="I7f-9a-cvF"/>
+                                            <constraint firstAttribute="trailing" secondItem="LlF-ia-x2o" secondAttribute="trailing" id="KJY-UF-BAN"/>
+                                            <constraint firstItem="UwP-tW-a04" firstAttribute="top" secondItem="ei0-g8-DJl" secondAttribute="top" constant="12" id="TRN-PE-SQP"/>
+                                            <constraint firstAttribute="bottom" secondItem="LlF-ia-x2o" secondAttribute="bottom" id="VpY-QH-0Xs"/>
+                                            <constraint firstItem="5il-BB-92T" firstAttribute="leading" secondItem="Rfi-H9-uK9" secondAttribute="leading" id="Xo3-ts-GQS"/>
+                                            <constraint firstAttribute="trailing" secondItem="BXU-ML-Zim" secondAttribute="trailing" constant="12" id="ZeD-xV-lcA"/>
+                                            <constraint firstItem="BXU-ML-Zim" firstAttribute="leading" secondItem="ei0-g8-DJl" secondAttribute="leading" constant="12" id="a86-4V-9rk"/>
+                                            <constraint firstAttribute="trailing" secondItem="UwP-tW-a04" secondAttribute="trailing" constant="12" id="d8c-1J-yxq"/>
+                                            <constraint firstAttribute="trailing" secondItem="5il-BB-92T" secondAttribute="trailing" constant="12" id="dAX-x1-hgW"/>
+                                            <constraint firstItem="LlF-ia-x2o" firstAttribute="top" secondItem="ev7-JA-Fqg" secondAttribute="bottom" constant="8" id="kax-Si-6iA"/>
+                                            <constraint firstItem="UwP-tW-a04" firstAttribute="leading" secondItem="b8u-zZ-g9b" secondAttribute="trailing" constant="10" id="keH-if-vhm"/>
+                                            <constraint firstAttribute="trailing" secondItem="ev7-JA-Fqg" secondAttribute="trailing" id="sLO-bv-F7n"/>
+                                            <constraint firstItem="Rfi-H9-uK9" firstAttribute="leading" secondItem="ei0-g8-DJl" secondAttribute="leading" constant="16" id="yk7-Dn-52p"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="ei0-g8-DJl" firstAttribute="width" secondItem="GZK-4k-arh" secondAttribute="width" id="A3n-c6-mcM"/>
+                                    <constraint firstItem="ei0-g8-DJl" firstAttribute="height" secondItem="GZK-4k-arh" secondAttribute="height" priority="250" id="GEa-Uc-RLr"/>
+                                    <constraint firstItem="ei0-g8-DJl" firstAttribute="trailing" secondItem="jIe-CB-Qib" secondAttribute="trailing" id="Iva-cK-vAJ"/>
+                                    <constraint firstItem="jIe-CB-Qib" firstAttribute="leading" secondItem="ei0-g8-DJl" secondAttribute="leading" id="USD-GQ-7bv"/>
+                                    <constraint firstItem="ei0-g8-DJl" firstAttribute="top" secondItem="jIe-CB-Qib" secondAttribute="top" id="Y9c-QG-zSZ"/>
+                                    <constraint firstItem="ei0-g8-DJl" firstAttribute="bottom" secondItem="jIe-CB-Qib" secondAttribute="bottom" id="aeY-O4-jSU"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="jIe-CB-Qib"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="GZK-4k-arh"/>
+                            </scrollView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bxl-O6-Ahz" customClass="CircleCardView" customModule="MyBooks" customModuleProvider="target">
+                                <rect key="frame" x="177" y="792" width="60" height="60"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="plus" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="LuH-CQ-Uft">
+                                        <rect key="frame" x="10" y="12" width="40" height="36"/>
+                                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QOS-Hm-nxR">
+                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <connections>
+                                            <action selector="onNavigateFormBook:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xvF-gg-WKF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                <constraints>
+                                    <constraint firstItem="QOS-Hm-nxR" firstAttribute="leading" secondItem="Bxl-O6-Ahz" secondAttribute="leading" id="5tb-LS-N7R"/>
+                                    <constraint firstAttribute="bottom" secondItem="QOS-Hm-nxR" secondAttribute="bottom" id="Bai-Q4-7iU"/>
+                                    <constraint firstItem="LuH-CQ-Uft" firstAttribute="top" secondItem="Bxl-O6-Ahz" secondAttribute="top" constant="10" id="Q8d-Jy-0Fg"/>
+                                    <constraint firstAttribute="trailing" secondItem="LuH-CQ-Uft" secondAttribute="trailing" constant="10" id="UPQ-gy-OPH"/>
+                                    <constraint firstAttribute="trailing" secondItem="QOS-Hm-nxR" secondAttribute="trailing" id="n7i-Zh-8y5"/>
+                                    <constraint firstItem="QOS-Hm-nxR" firstAttribute="top" secondItem="Bxl-O6-Ahz" secondAttribute="top" id="uYF-R6-Xa4"/>
+                                    <constraint firstAttribute="bottom" secondItem="LuH-CQ-Uft" secondAttribute="bottom" constant="10" id="yBQ-Lo-c3t"/>
+                                    <constraint firstItem="LuH-CQ-Uft" firstAttribute="leading" secondItem="Bxl-O6-Ahz" secondAttribute="leading" constant="10" id="yMl-E3-Jqh"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="Show" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <accessibility key="accessibilityConfiguration" identifier="MainVC"/>
+                        <constraints>
+                            <constraint firstItem="yLm-KW-7eD" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="62Z-Dx-rkw"/>
+                            <constraint firstItem="yLm-KW-7eD" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="7Tk-Ad-lDB"/>
+                            <constraint firstItem="Tiy-Fw-UDl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="8sK-Nr-EQF"/>
+                            <constraint firstItem="Bxl-O6-Ahz" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.145" id="9bv-0A-NV8"/>
+                            <constraint firstItem="Bxl-O6-Ahz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.145" id="9fP-MH-mIa"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Bxl-O6-Ahz" secondAttribute="bottom" constant="10" id="HIc-vQ-0Xj"/>
+                            <constraint firstItem="yLm-KW-7eD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RZn-wY-zrU"/>
+                            <constraint firstItem="Tiy-Fw-UDl" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="V6G-o9-g3m"/>
+                            <constraint firstItem="Tiy-Fw-UDl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="he0-0g-qaW"/>
+                            <constraint firstItem="Bxl-O6-Ahz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="iyB-e7-cm8"/>
+                            <constraint firstAttribute="bottom" secondItem="yLm-KW-7eD" secondAttribute="bottom" id="oFb-ks-afd"/>
+                            <constraint firstAttribute="bottom" secondItem="Tiy-Fw-UDl" secondAttribute="bottom" id="ptn-UI-8YE"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="dM0-XW-mtN"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="BtnView_Add" destination="Bxl-O6-Ahz" id="M8i-Yb-zuJ"/>
+                        <outlet property="CollectionView_Book" destination="LlF-ia-x2o" id="WLC-nC-jzd"/>
+                        <outlet property="LoadingView" destination="yLm-KW-7eD" id="Qh1-IW-HRD"/>
+                        <outlet property="TF_SearchBook" destination="Cb0-9d-sdV" id="4zC-ka-62Z"/>
+                        <outlet property="heightConstraint_CollectionView_Book" destination="n4D-s7-qkB" id="fAg-gE-Qzj"/>
+                        <outlet property="label_GreetUser" destination="Rfi-H9-uK9" id="SCI-jX-MZa"/>
+                        <outlet property="label_GreetingMore" destination="5il-BB-92T" id="d1Z-pO-fuq"/>
+                        <outlet property="scrollView" destination="Tiy-Fw-UDl" id="0aT-GO-LiV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="884.05797101449286" y="70.982142857142847"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="p06-7c-1oV">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="quw-9N-dzz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2CB-wt-mBo">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="KXQ-h1-b9d"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UyR-he-kV7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="70.982142857142847"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+    <resources>
+        <image name="circle-book" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="plus" catalog="system" width="128" height="113"/>
+        <image name="power" catalog="system" width="128" height="124"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
